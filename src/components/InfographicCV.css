@@ -253,11 +253,25 @@
     width: 100%;
     gap: 15px;
     padding: 0;
+    display: grid !important;
+    grid-template-columns: 1fr 380px 1fr !important;
+    align-items: center;
+  }
+
+  /* Ensure columns stay side-by-side and don't collapse */
+  .left-column, .right-column {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .center-column {
+    grid-row: auto !important; /* Reset to normal flow */
   }
 
   .center-graphic {
     width: 380px;
     height: 380px;
+    margin: 0 auto;
   }
 
   .profile-img {
